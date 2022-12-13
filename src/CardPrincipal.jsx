@@ -2,7 +2,7 @@ import './cardPrincipal.css'
 
 function CardPrincipal() {
     return (
-        <>
+        <> 
         </>
     );
 }

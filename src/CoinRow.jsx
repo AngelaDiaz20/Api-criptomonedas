@@ -1,4 +1,5 @@
 import "./coinRow.css"
+import { deleteDec, colorDec, numberF  } from "./App";
 
 export default function CoinRow({coin, index}) {
   return (
@@ -9,10 +10,11 @@ export default function CoinRow({coin, index}) {
           <img src={coin.image} alt={coin.id}/>
         </div>
       </td>
-      <td>{coin.current_price}US$</td>
-      <td>{coin.market_cap_change_percentage_24h}%</td>
-      <td>{coin.total_volume}US$</td>
-      <td>{coin.market_cap}US$</td>
+      <td>{numberF.format(coin.current_price)}US$</td>
+      <td className={colorDec(coin.market_cap_change_percentage_24h
+)}>{deleteDec(coin.market_cap_change_percentage_24h,2)}%</td>
+      <td>{numberF.format(coin.total_volume)}US$</td>
+      <td>{numberF.format(coin.market_cap)}US$</td>
       <td>Gráfica</td>
     </tr>
   );

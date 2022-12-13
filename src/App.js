@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; //Importación de los hook
 import "./App.css"; 
 import Footer from './Footer'
 import Header from './Header'
@@ -6,6 +6,7 @@ import TableCoins from "./TableCoins";
 
 export default function App() {
 
+  //Variable para almacenar
   const [coins, setCoins] = useState()
 
   const getData = async () =>{
@@ -31,3 +32,12 @@ export default function App() {
   )
 }
 
+export function deleteDec(val, decimal){
+  return val.toFixed(decimal)
+}
+
+export function colorDec(num){
+  return num > 0 ? "green" : "red"
+}
+
+export const numberF = Intl.NumberFormat("es-Es")
