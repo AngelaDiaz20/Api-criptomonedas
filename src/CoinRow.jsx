@@ -1,5 +1,6 @@
 import "./coinRow.css"
 import { deleteDec, colorDec, numberF  } from "./App";
+import Graph from "./Graph";
 
 export default function CoinRow({coin, index}) {
   return (
@@ -15,7 +16,7 @@ export default function CoinRow({coin, index}) {
 )}>{deleteDec(coin.market_cap_change_percentage_24h,2)}%</td>
       <td>{numberF.format(coin.total_volume)}US$</td>
       <td>{numberF.format(coin.market_cap)}US$</td>
-      <td>Gráfica</td>
+      <td><Graph coin={coin.id} days={7} color={colorDec(coin.market_cap_change_percentage_24h)}/></td>
     </tr>
   );
-}
+} 
