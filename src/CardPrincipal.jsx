@@ -2,7 +2,8 @@ import './cardPrincipal.css'
 import { deleteDec, colorDec } from './App'
 import Graph from "./Graph";
 
-function CardPrincipal({ json: { id,
+function CardPrincipal({ json: { 
+    id,
     symbol,
     current_price,
     image,
