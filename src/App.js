@@ -5,6 +5,7 @@ import Header from './Header'
 import TableCoins from './TableCoins';
 import CardPrincipal from './CardPrincipal';
 import Card from './Card';
+import Convert from './Convert';
 
 export default function App() {
   const [coins, setCoins] = useState()
@@ -49,6 +50,7 @@ export default function App() {
           }})}
         </div>
       </main>
+      <Convert/>
       <TableCoins coins={coins}/>
       <Footer/>
     </div>
