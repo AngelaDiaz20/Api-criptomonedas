@@ -44,7 +44,7 @@ export default function Graph({ type = 1, coin = "bitcoin", days = 30, color = "
         }
     }
 
-    let url = `https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=usd&days=${days}&interval=daily`
+    let url = `https://api.coingecko.com/api/v3/coins/${coin}/market_chart?vs_currency=${currency}&days=${days}&interval=daily`
     let data, options
 
     const [prices, setPrices] = useState()

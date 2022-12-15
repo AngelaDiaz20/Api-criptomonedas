@@ -34,7 +34,7 @@ export default function App() {
     <div className='App'>
       <Header currencys={currency} fun={setSelCur} cur={selCur}/>
       <main>
-        <CardPrincipal json={coins[0]}/>
+        <CardPrincipal json={coins[0]} cur={selCur}/>
         <div className='cards_con'>
           {coins.map(({id,symbol, image, current_price,price_change_percentage_30d_in_currency},index) =>{
             if(index !== 0) {
@@ -44,6 +44,7 @@ export default function App() {
                   porcentaje={deleteDec(price_change_percentage_30d_in_currency,2)}
                   img={image}
                   coinId={id}
+                  cur={selCur}
             />
           }})}
         </div>
